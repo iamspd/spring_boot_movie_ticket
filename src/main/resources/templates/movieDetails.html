@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>Movie Id</th>
+			<th>Movie</th>
+			<th>Customer Name</th>
+			<th>Amount Paid</th>
+			<th>Tickets</th>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Venue</th>
+		</tr>
+		<tr th:each="movie : ${movieList}">
+			<td th:text="${movie.movieId}">Movie Id</td>
+			<td th:text="${movie.movieName}">Name</td>
+			<td th:text="${movie.customerName}">Language</td>
+			<td th:text="${movie.amountPaid}">Genre</td>
+			<td th:text="${movie.numberOfTickets}">Number of Tickets</td>
+			<td th:text="${movie.bookingDate}">Date</td>
+			<td th:text="${movie.bookingTime}">Time</td>
+			<td th:text="${movie.bookedVenue}">Venue</td>
+		</tr>
+	</table>
+    <strong><a href="/">Go back</a></strong>
+	
+</body>
+</html>
